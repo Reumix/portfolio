@@ -10,7 +10,7 @@ import Projet from "./components/Projet.jsx";
 
 const router = createBrowserRouter([
     {
-        path: '/testvite',
+        path: '/portfolio',
         element: <App/>,
     },
     {
