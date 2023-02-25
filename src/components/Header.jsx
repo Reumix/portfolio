@@ -6,7 +6,7 @@ function Header(){
         <div class="header">
             <h3>Rémi Chabrerie</h3>
             <ul class="inline">
-                <li><Link to={'/testvite'}>Accueil</Link></li>
+                <li><Link to={'/portfolio'}>Accueil</Link></li>
                 <li><Link to={`/creations`}>Créations</Link></li>
                 <li><Link to={`/valeurs`}>Valeurs</Link></li>
                 <li><Link to={`/contact`}>Contact</Link></li>
