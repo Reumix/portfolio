@@ -1,8 +1,8 @@
 function Footer(){
     return(
-        <div class="footer">
+        <div className={"footer"}>
             <h3>Footer</h3>
-            <p class="inline">2023</p>
+            <p className={"inline"}>2023</p>
         </div>
     )
 }

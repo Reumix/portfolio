@@ -1,15 +1,31 @@
 import {useEffect} from "react";
 import {Link} from "react-router-dom";
+import data from "./data/project.json"
 
 function Header(){
     return(
-        <div class="header">
+        <div className={"header"}>
             <h3>Rémi Chabrerie</h3>
-            <ul class="inline">
+            <ul className={"inline"}>
                 <li><Link to={'/portfolio'}>Accueil</Link></li>
-                <li><Link to={`/creations`}>Créations</Link></li>
-                <li><Link to={`/valeurs`}>Valeurs</Link></li>
-                <li><Link to={`/contact`}>Contact</Link></li>
+                {/*<li><Link to={`/portfolio/creations`}>Créations</Link></li>*/}
+                <li>
+                    <div className={"dropdown"}>
+                        <Link to={""} className={"dropbtn"}>Créations</Link>
+                        <div className={"dropdown-content"}>
+                            <Link to={`/portfolio/creations`}>Tout les projets</Link>
+                            {
+                                data.project.map((project) => {
+                                    return (
+                                        <Link to={`/portfolio/creations/projet/${project.id}`}>{project.name}</Link>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                </li>
+                <li><Link to={`/portfolio/valeurs`}>Valeurs</Link></li>
+                <li><Link to={`/portfolio/contact`}>Contact</Link></li>
             </ul>
         </div>
     )
