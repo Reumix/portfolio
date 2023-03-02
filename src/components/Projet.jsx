@@ -1,6 +1,6 @@
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
-import data from "./data/project.json"
+import data from "./data/project.json";
 import {Link} from "react-router-dom";
 import {useParams} from "react-router-dom";
 

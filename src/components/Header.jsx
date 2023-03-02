@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 import {Link} from "react-router-dom";
-import data from "./data/project.json"
+import data from "./data/project.json";
 
 function Header(){
     return(
