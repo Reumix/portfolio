@@ -1,4 +1,3 @@
-import {useEffect} from "react";
 import {Link} from "react-router-dom";
 import data from "./data/project.json";
 
@@ -8,7 +7,6 @@ function Header(){
             <h3>Rémi Chabrerie</h3>
             <ul className={"inline"}>
                 <li><Link to={'/portfolio'}>Accueil</Link></li>
-                {/*<li><Link to={`/portfolio/creations`}>Créations</Link></li>*/}
                 <li>
                     <div className={"dropdown"}>
                         <Link to={""} className={"dropbtn"}>Créations</Link>

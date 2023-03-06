@@ -4,9 +4,19 @@
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /*background-color: #36426c;*/
-  background-image: linear-gradient(to right, #626262, #424242);
-  /*background-color: rgb(54, 66, 108);*/
+  /*
+  background-color: #36426c;
+  background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(209,18,18,1) 50%, rgba(0,0,0,1) 100%);
+  background-color: rgb(54, 66, 108);
+  */
+  background: linear-gradient(to bottom right, #0100ec, #fB36f4);
+
+  /*
+  background: linear-gradient(to bottom right, #ff512F, #dd2476);
+  background: linear-gradient(to bottom right, #ff61d2, #fe9090);
+  background: linear-gradient(to bottom right, #72ffb6, #10d164);
+  background: linear-gradient(to bottom right, #305170, #37b235);
+   */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -62,13 +72,11 @@ button:focus, button:focus-visible { outline: 4px auto -webkit-focus-ring-color;
 
 .header, .footer{
   border-radius: 5px;
-  border-color: rgba(56, 56, 56, 0.2);
   background-color: rgba(56, 56, 56, 0.2);
   display: flex;
   justify-content: space-between;
   padding-left: 2em;
   padding-right: 2em;
-  margin-bottom: 2em;
 }
 
 li {

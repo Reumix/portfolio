@@ -67,10 +67,16 @@
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  color: #7319f0;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: rgba(62, 142, 65, 0);}
+.dropdown:hover .dropbtn {
+  background-color: rgba(62, 142, 65, 0);
+}

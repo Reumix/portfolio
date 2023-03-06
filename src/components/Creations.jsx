@@ -1,21 +1,9 @@
-import { useState, useEffect } from "react";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import data from "./data/project.json";
-import Retour from "./Retour.jsx";
 import { Link } from "react-router-dom";
-import { useProjectStore } from "../store/projectStore.js";
 
 function Creations(){
-
-    const { projects, setProjects } = useProjectStore();
-
-    useEffect(() => {
-        fetch(data.project)
-            //.then((res) => res.json())
-            .then((res) => setProjects(res));
-    }, []);
-
     return(
         <div>
             <Header></Header>

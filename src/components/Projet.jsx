@@ -15,7 +15,7 @@ function Projet(){
                 <div>
                     <h2>{data.project[id-1].name}</h2>
                     <p>{data.project[id-1].desc}</p>
-                    <Link to={"/portfolio/creations"}>Retour à la liste</Link>
+                    <button><Link to={"/portfolio/creations"}>Retour à la liste</Link></button>
                 </div>
             }
             <Footer></Footer>
