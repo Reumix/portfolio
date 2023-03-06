@@ -15,7 +15,7 @@ function Creations(){
                             <h2>{project.name}</h2>
                             <div>
                                 <div>
-                                    <img src={"/images/capture" + project.id + ".png"} height={400} width={400} alt={"Image " + project.id}></img>
+                                    <img src={"/portfolio/images/capture" + project.id + ".png"} height={400} width={400} alt={"Image " + project.id}></img>
                                 </div>
                                 <div className={"project-description"}>
                                     <p className="inline">{project.desc}</p>
