@@ -42,7 +42,11 @@ function Projet(){
                             }
                         </div>
                     </div>
-                    <Link to={"/portfolio/creations"}><button>Retour à la liste</button></Link>
+                    <div className={"project-nav"}>
+                        <Link to={`/portfolio/creations/projet/${parseInt(id)-1}`}><button>Projet précédent</button></Link>
+                        <Link to={"/portfolio/creations"}><button>Retour à la liste</button></Link>
+                        <Link to={`/portfolio/creations/projet/${parseInt(id)+1}`}><button>Projet suivant</button></Link>
+                    </div>
                 </div>
             }
             <Footer></Footer>

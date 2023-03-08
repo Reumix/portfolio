@@ -10,7 +10,7 @@
           "url": "https://github.com/LRG2B/Chazay-d-Azergues",
           "competences": [
             {
-              "langages": [ 0 ],
+              "langages": [ 1 ],
               "logiciels": [ 0, 5]
             }
           ]
@@ -23,7 +23,7 @@
           "url": "https://github.com/LRG2B/Chazay-Dazergues-Origins",
           "competences": [
             {
-              "langages": [ 0 ],
+              "langages": [ 1 ],
               "logiciels": [ 0, 5]
             }
           ]
@@ -36,7 +36,7 @@
           "url": "https://github.com/LRG2B/Fluffy-Batman-Over-Normandy",
           "competences": [
             {
-              "langages": [ 0 ],
+              "langages": [ 1 ],
               "logiciels": [ 0, 5]
             }
           ]
@@ -49,7 +49,7 @@
           "url": null,
           "competences": [
             {
-              "langages": [ 1 ],
+              "langages": [ 0 ],
               "logiciels": [ 1 ]
             }
           ]

@@ -15,7 +15,7 @@ function Creations(){
                             <div key={project.id} className="project">
                                 <h2>{project.name}</h2>
                                 <div>
-                                    <img src={"/src/images/capture" + project.id + ".png"} height={300} width={300} alt={project.name}></img><br/>
+                                    <img src={"src/images/capture" + project.id + ".png"} height={300} width={300} alt={project.name}></img><br/>
                                     <Link to={`/portfolio/creations/projet/${project.id}`}><button>Voir le projet</button></Link>
                                 </div>
                             </div>

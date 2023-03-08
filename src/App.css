@@ -118,3 +118,8 @@
 .dropdown:hover .dropbtn {
   background-color: rgba(62, 142, 65, 0);
 }
+
+.project-nav {
+  display: flex;
+  justify-content: space-around;
+}
