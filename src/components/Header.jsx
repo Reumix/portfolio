@@ -13,8 +13,9 @@ function Header(){
                         <Link to={""} className={"dropbtn"}>Créations</Link>
                         <div className={"dropdown-content"}>
                             <Link to={`/portfolio/creations`}>Tout les projets</Link>
+                            <p>Jeux</p>
                             {
-                                data.project.map((project) => {
+                                data.project[0].jeux.map((project) => {
                                     return (
                                         <Link to={`/portfolio/creations/projet/${project.id}`}>{project.name}</Link>
                                     )

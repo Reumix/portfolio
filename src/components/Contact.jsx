@@ -4,11 +4,11 @@ import Footer from "./Footer.jsx";
 
 function Contact(){
     return(
-        <div>
+        <>
             <Header></Header>
-            <h1>Contact</h1>
+            <h1 className={"titre-inline"}>Contact</h1>
             <Footer></Footer>
-        </div>
+        </>
     )
 }
 

@@ -3,12 +3,12 @@ import Footer from "./Footer.jsx";
 
 function Valeurs(){
     return(
-        <div>
+        <>
             <Header></Header>
-            <h1>Valeurs</h1>
+            <h1 className={"titre-inline"}>Valeurs</h1>
             {/*<p>Numérique responsable</p>*/}
             <Footer></Footer>
-        </div>
+        </>
     )
 }
 

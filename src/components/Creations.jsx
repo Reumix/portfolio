@@ -5,17 +5,17 @@ import { Link } from "react-router-dom";
 
 function Creations(){
     return(
-        <div>
+        <>
             <Header></Header>
-            <h1>Mes projets</h1>
-            <div className={"project-list"}>
+            <h1 className={"titre-inline"}>Mes projets</h1>
+            <div className={"content"}>
                 {
-                    data.project.map((project) => {
+                    data.project[0].jeux.map((project) => {
                         return (
                             <div key={project.id} className="project">
                                 <h2>{project.name}</h2>
                                 <div>
-                                    <img src={"/src/images/capture" + project.id + ".png"} height={300} width={300} alt={project.name}></img>
+                                    <img src={"/src/images/capture" + project.id + ".png"} height={300} width={300} alt={project.name}></img><br/>
                                     <Link to={`/portfolio/creations/projet/${project.id}`}><button>Voir le projet</button></Link>
                                 </div>
                             </div>
@@ -24,7 +24,7 @@ function Creations(){
                 }
             </div>
             <Footer></Footer>
-        </div>
+        </>
     )
 }
 

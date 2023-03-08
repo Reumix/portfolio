@@ -3,71 +3,76 @@
     {
       "langages": [
         {
+          "id": 0,
+          "name": "C++",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png"
+        },
+        {
           "id": 1,
-          "name": "Csharp",
+          "name": "C#",
           "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1200px-Logo_C_sharp.svg.png"
         },
         {
           "id": 2,
-          "name": "Cpp",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png"
-        },
-        {
-          "id": 3,
-          "name": "javascript",
+          "name": "Javascript",
           "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
         },
         {
-          "id": 4,
+          "id": 3,
           "name": "HTML",
           "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png"
         },
         {
-          "id": 5,
+          "id": 4,
           "name": "CSS",
           "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png"
         },
         {
-          "id": 6,
+          "id": 5,
           "name": "Java",
           "image": "https://cdn-icons-png.flaticon.com/512/226/226777.png"
         }
       ],
       "logiciels": [
         {
-          "id": 1,
-          "name": "Unity Engine",
+          "id": 0,
+          "name": "Unity",
           "image": "https://seeklogo.com/images/U/unity-logo-988A22E703-seeklogo.com.png"
         },
         {
-          "id": 2,
+          "id": 1,
           "name": "Unreal Engine",
           "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Unreal_Engine_Logo.svg/1200px-Unreal_Engine_Logo.svg.png"
         },
         {
-          "id": 3,
+          "id": 2,
           "name": "Affinity Designer",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Logo_AffinityDesigner.svg/2048px-Logo_AffinityDesigner.svg.png"
+          "image": "data:image/png;base64,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"
         },
         {
-          "id": 4,
+          "id": 3,
           "name": "Webstorm",
           "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/WebStorm_Icon.png/1024px-WebStorm_Icon.png"
         },
         {
-          "id": 5,
+          "id": 4,
           "name": "Docker",
           "image": "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
         },
         {
-          "id": 6,
+          "id": 5,
           "name": "Github",
           "image": "https://cdn-icons-png.flaticon.com/512/25/25231.png"
         },
         {
-          "id": 7,
+          "id": 6,
           "name": "Android Studio",
           "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Android_Studio_Icon_3.6.svg/1900px-Android_Studio_Icon_3.6.svg.png"
+        },
+        {
+          "id": 7,
+          "name": "React",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
         }
       ]
     }
