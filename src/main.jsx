@@ -7,6 +7,7 @@ import Contact from "./components/Contact.jsx";
 import Valeurs from "./components/Valeurs.jsx";
 import Creations from "./components/Creations.jsx";
 import Projet from "./components/Projet.jsx";
+import Competences from "./components/Competences.jsx";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
     {
         path: '/portfolio/creations/projet/:id',
         element: <Projet/>
+    },
+    {
+        path: '/portfolio/competences',
+        element: <Competences/>
     }
 ])
 

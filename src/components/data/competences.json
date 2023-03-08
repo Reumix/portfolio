@@ -1,0 +1,75 @@
+{
+  "competences": [
+    {
+      "langages": [
+        {
+          "id": 1,
+          "name": "Csharp",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1200px-Logo_C_sharp.svg.png"
+        },
+        {
+          "id": 2,
+          "name": "Cpp",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png"
+        },
+        {
+          "id": 3,
+          "name": "javascript",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+        },
+        {
+          "id": 4,
+          "name": "HTML",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png"
+        },
+        {
+          "id": 5,
+          "name": "CSS",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png"
+        },
+        {
+          "id": 6,
+          "name": "Java",
+          "image": "https://cdn-icons-png.flaticon.com/512/226/226777.png"
+        }
+      ],
+      "logiciels": [
+        {
+          "id": 1,
+          "name": "Unity Engine",
+          "image": "https://seeklogo.com/images/U/unity-logo-988A22E703-seeklogo.com.png"
+        },
+        {
+          "id": 2,
+          "name": "Unreal Engine",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Unreal_Engine_Logo.svg/1200px-Unreal_Engine_Logo.svg.png"
+        },
+        {
+          "id": 3,
+          "name": "Affinity Designer",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Logo_AffinityDesigner.svg/2048px-Logo_AffinityDesigner.svg.png"
+        },
+        {
+          "id": 4,
+          "name": "Webstorm",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/WebStorm_Icon.png/1024px-WebStorm_Icon.png"
+        },
+        {
+          "id": 5,
+          "name": "Docker",
+          "image": "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
+        },
+        {
+          "id": 6,
+          "name": "Github",
+          "image": "https://cdn-icons-png.flaticon.com/512/25/25231.png"
+        },
+        {
+          "id": 7,
+          "name": "Android Studio",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Android_Studio_Icon_3.6.svg/1900px-Android_Studio_Icon_3.6.svg.png"
+        }
+      ]
+    }
+  ]
+}

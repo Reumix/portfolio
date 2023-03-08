@@ -13,9 +13,12 @@ function Projet(){
             <Header></Header>
             {
                 <div>
-                    <h2>{data.project[id-1].name}</h2>
-                    <p>{data.project[id-1].desc}</p>
-                    <button><Link to={"/portfolio/creations"}>Retour à la liste</Link></button>
+                    <div>
+                        <h2>{data.project[id-1].name}</h2>
+                        <p>{data.project[id-1].desc}</p>
+                        <img src={"/src/images/capture" + id + ".png"} height={500} width={500} alt={data.project[id-1].name}/>
+                    </div>
+                    <Link to={"/portfolio/creations"}><button>Retour à la liste</button></Link>
                 </div>
             }
             <Footer></Footer>

@@ -7,6 +7,7 @@ function Header(){
             <h3>Rémi Chabrerie</h3>
             <ul className={"inline"}>
                 <li><Link to={'/portfolio'}>Accueil</Link></li>
+                <li><Link to={'/portfolio/competences'}>Compétences</Link></li>
                 <li>
                     <div className={"dropdown"}>
                         <Link to={""} className={"dropbtn"}>Créations</Link>

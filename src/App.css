@@ -31,6 +31,29 @@
   padding-right: 1em;
 }
 
+.competences-general {
+  /*background-color: red;*/
+}
+
+.competences-types {
+  background-color: rgba(56, 56, 56, 0.2);
+  border-radius: 7px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 20px;
+  padding: 20px;
+
+}
+
+.competences {
+  background-color: rgba(56, 56, 56, 0.2);
+  width: 300px;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+  padding-top: 25px;
+  border-radius: 5px;
+}
+
 /* Dropdown Button */
 .dropbtn {
   background-color: rgba(4, 170, 109, 0);
