@@ -27,7 +27,11 @@ const router = createBrowserRouter([
         element: <Creations/>
     },
     {
-        path: '/portfolio/creations/projet/:id',
+        path: '/portfolio/creations/jeux/:id',
+        element: <Projet/>
+    },
+    {
+        path: '/portfolio/creations/web/:id',
         element: <Projet/>
     },
     {

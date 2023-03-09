@@ -17,7 +17,15 @@ function Header(){
                             {
                                 data.project[0].jeux.map((project) => {
                                     return (
-                                        <Link to={`/portfolio/creations/projet/${project.id}`}>{project.name}</Link>
+                                        <Link to={`/portfolio/creations/jeux/${project.id}`}>{project.name}</Link>
+                                    )
+                                })
+                            }
+                            <p>Web</p>
+                            {
+                                data.project[0].web.map((project) => {
+                                    return (
+                                        <Link to={`/portfolio/creations/web/${project.id}`}>{project.name}</Link>
                                     )
                                 })
                             }

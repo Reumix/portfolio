@@ -1,14 +1,75 @@
+import {useState, useEffect} from "react";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import data from "./data/project.json";
 import data_competences from "./data/competences.json"
-import {Link} from "react-router-dom";
+import {Link, parsePath} from "react-router-dom";
 import {useParams} from "react-router-dom";
-import competences from "./Competences.jsx";
+
+function CheckPrevious(id, type) {
+    if (parseInt(id) === 0){
+        return(
+            <p><button disabled={true}>Projet précédent</button></p>
+        )
+    } else {
+        if (type === "jeux"){
+            return(
+                <Link to={`/portfolio/creations/jeux/${parseInt(id)-1}`}><button disabled={false}>Projet précédent</button></Link>
+            )
+        } else if (type === "web"){
+            return(
+                <Link to={`/portfolio/creations/web/${parseInt(id)-1}`}><button disabled={false}>Projet précédent</button></Link>
+            )
+        }
+    }
+}
+
+function CheckNext(id, type){
+
+    let totalPages = undefined;
+
+    if (type === "jeux"){
+        totalPages = data.project[0].jeux.length-1;
+
+        if (parseInt(id) !== totalPages){
+            return(
+                    <Link to={`/portfolio/creations/jeux/${parseInt(id)+1}`}><button disabled={false}>Projet suivant</button></Link>
+            )
+        }
+
+    } else if (type === "web") {
+        totalPages = data.project[0].web.length-1;
+
+        if (parseInt(id) !== totalPages){
+            return(
+                <Link to={`/portfolio/creations/web/${parseInt(id)+1}`}><button disabled={false}>Projet suivant</button></Link>
+            )
+        }
+    }
+
+    if (parseInt(id) === totalPages) {
+        return(
+            <p><button disabled={true}>Projet suivant</button></p>
+        )
+    }
+}
 
 function Projet(){
 
+    const array = () => {
+        useEffect(() => {
+
+            if (type === "jeux"){ return data.project[0].jeux; }
+            else if (type === "web"){ return data.project[0].web; }
+        },[]);
+    }
+
+    //const [array, setArray] = useState(null);
     let { id } = useParams();
+    const path = window.location.pathname;
+    const type = path.split('/')[3];
+
+
 
     return (
         <>
@@ -43,9 +104,9 @@ function Projet(){
                         </div>
                     </div>
                     <div className={"project-nav"}>
-                        <Link to={`/portfolio/creations/projet/${parseInt(id)-1}`}><button>Projet précédent</button></Link>
+                        { CheckPrevious(id, type) }
                         <Link to={"/portfolio/creations"}><button>Retour à la liste</button></Link>
-                        <Link to={`/portfolio/creations/projet/${parseInt(id)+1}`}><button>Projet suivant</button></Link>
+                        { CheckNext(id, type) }
                     </div>
                 </div>
             }

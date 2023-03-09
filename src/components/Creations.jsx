@@ -16,10 +16,24 @@ function Creations(){
                                 <h2>{project.name}</h2>
                                 <div>
                                     <img src={"src/images/capture" + project.id + ".png"} height={300} width={300} alt={project.name}></img><br/>
-                                    <Link to={`/portfolio/creations/projet/${project.id}`}><button>Voir le projet</button></Link>
+                                    <Link to={`/portfolio/creations/jeux/${project.id}`}><button>Voir le projet</button></Link>
                                 </div>
                             </div>
                         );
+                    })
+                }
+            </div>
+            <div className={"content"}>
+                {
+                    data.project[0].web.map((project) => {
+                        return (
+                            <div key={project.id} className={"project"}>
+                                <h2>{project.name}</h2>
+                                <div>
+                                    <Link to={`/portfolio/creations/web/${project.id}`}><button>Voir le projet</button></Link>
+                                </div>
+                            </div>
+                        )
                     })
                 }
             </div>

@@ -8,6 +8,7 @@
           "desc": "Jeu 2D type plateformer.",
           "date": "Décembre 2021 - Avril 2022",
           "url": "https://github.com/LRG2B/Chazay-d-Azergues",
+          "src": "/src/images/capture0.png",
           "competences": [
             {
               "langages": [ 1 ],
@@ -21,6 +22,7 @@
           "desc": "Jeu 2D type plateformer (mais en mieux).",
           "date": "Avril 2022 - Juin 2022",
           "url": "https://github.com/LRG2B/Chazay-Dazergues-Origins",
+          "src": "/src/images/capture0.png",
           "competences": [
             {
               "langages": [ 1 ],
@@ -34,6 +36,7 @@
           "desc": "Jeu 3D de conduite.",
           "date": "Septembre 2022 - Novembre 2022",
           "url": "https://github.com/LRG2B/Fluffy-Batman-Over-Normandy",
+          "src": "/src/images/capture0.png",
           "competences": [
             {
               "langages": [ 1 ],
@@ -47,10 +50,27 @@
           "desc": "Jeu d'énigme horrifique multijoueur en réalité virtuelle.",
           "date": "Work In Progress",
           "url": null,
+          "src": "/src/images/capture0.png",
           "competences": [
             {
               "langages": [ 0 ],
               "logiciels": [ 1 ]
+            }
+          ]
+        }
+      ],
+      "web": [
+        {
+          "id": 0,
+          "name": "Touite",
+          "desc": "Un blog random",
+          "date": "Octobre 2022 - Décembre 2022",
+          "url": null,
+          "src": "",
+          "competences": [
+            {
+              "langages": [3, 4],
+              "logiciels": [7, 5]
             }
           ]
         }
