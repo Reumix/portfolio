@@ -8,6 +8,7 @@ function Creations(){
         <>
             <Header></Header>
             <h1 className={"titre-inline"}>Mes projets</h1>
+            <h2>Jeux vidéos</h2>
             <div className={"content"}>
                 {
                     data.project[0].jeux.map((project) => {
@@ -15,7 +16,7 @@ function Creations(){
                             <div key={project.id} className="project">
                                 <h2>{project.name}</h2>
                                 <div>
-                                    <img src={"src/images/capture" + project.id + ".png"} height={300} width={300} alt={project.name}></img><br/>
+                                    <img src={project.src} height={300} width={300} alt={project.name}></img><br/>
                                     <Link to={`/portfolio/creations/jeux/${project.id}`}><button>Voir le projet</button></Link>
                                 </div>
                             </div>
@@ -23,6 +24,7 @@ function Creations(){
                     })
                 }
             </div>
+            <h2>Sites web</h2>
             <div className={"content"}>
                 {
                     data.project[0].web.map((project) => {
@@ -30,6 +32,7 @@ function Creations(){
                             <div key={project.id} className={"project"}>
                                 <h2>{project.name}</h2>
                                 <div>
+                                    <img src={project.src} height={300}/><br/>
                                     <Link to={`/portfolio/creations/web/${project.id}`}><button>Voir le projet</button></Link>
                                 </div>
                             </div>

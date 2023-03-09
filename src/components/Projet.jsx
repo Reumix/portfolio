@@ -2,10 +2,12 @@ import {useState, useEffect} from "react";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import data from "./data/project.json";
-import data_competences from "./data/competences.json"
-import {Link, parsePath} from "react-router-dom";
+import data_competences from "./data/competences.json";
+import {Link} from "react-router-dom";
 import {useParams} from "react-router-dom";
 
+
+//------------------Boutons------------------//
 function CheckPrevious(id, type) {
     if (parseInt(id) === 0){
         return(
@@ -23,7 +25,6 @@ function CheckPrevious(id, type) {
         }
     }
 }
-
 function CheckNext(id, type){
 
     let totalPages = undefined;
@@ -54,53 +55,93 @@ function CheckNext(id, type){
     }
 }
 
+//------------------Affichage------------------//
+
+function AffichageInfos(id, type){
+    if (type === "jeux"){
+        return (
+            <div>
+                <h2>{data.project[0].jeux[id].name}</h2>
+                <p>{data.project[0].jeux[id].desc}</p>
+                <img src={data.project[0].jeux[id].src} height={500} width={500} alt={data.project[0].jeux[id].name}/>
+            </div>
+        )
+    } else if (type === "web"){
+        return (
+            <div>
+                <h2>{data.project[0].web[id].name}</h2>
+                <p>{data.project[0].web[id].desc}</p>
+                <img src={data.project[0].web[id].src} height={500} width={500} alt={data.project[0].web[id].name}/>
+            </div>
+        )
+    }
+}
+
+function AffichageLangages(id, type){
+    if (type === "jeux") {
+        return (
+            data.project[0].jeux[id].competences[0].langages.map((lang) => {
+                return (
+                    <div className={"competences"}>
+                        <img src={data_competences.competences[0].langages[lang].image} height={150}></img>
+                        <p>{data_competences.competences[0].langages[lang].name}</p>
+                    </div>
+                )
+            })
+        )
+    } else if (type === "web"){
+        return (
+            data.project[0].web[id].competences[0].langages.map((lang) => {
+                return (
+                    <div className={"competences"}>
+                        <img src={data_competences.competences[0].langages[lang].image} height={150}></img>
+                        <p>{data_competences.competences[0].langages[lang].name}</p>
+                    </div>
+                )
+            })
+        )
+    }
+}
+
+function AffichageLogiciels(id, type){
+    if (type === "jeux"){
+        return (
+            data.project[0].jeux[id].competences[0].logiciels.map((logi) => {
+                return (
+                    <div className={"competences"}>
+                        <img src={data_competences.competences[0].logiciels[logi].image} height={150}></img>
+                        <p>{data_competences.competences[0].logiciels[logi].name}</p>
+                    </div>
+                )
+            })
+        )
+    } else if (type === "web"){
+        return (
+            data.project[0].web[id].competences[0].logiciels.map((logi) => {
+                return (
+                    <div className={"competences"}>
+                        <img src={data_competences.competences[0].logiciels[logi].image} height={150}></img>
+                        <p>{data_competences.competences[0].logiciels[logi].name}</p>
+                    </div>
+                )
+            })
+        )
+    }
+}
+
 function Projet(){
 
-    const array = () => {
-        useEffect(() => {
-
-            if (type === "jeux"){ return data.project[0].jeux; }
-            else if (type === "web"){ return data.project[0].web; }
-        },[]);
-    }
-
-    //const [array, setArray] = useState(null);
-    let { id } = useParams();
-    const path = window.location.pathname;
-    const type = path.split('/')[3];
-
-
+    let { id, type } = useParams();
 
     return (
         <>
             <Header></Header>
-            {
-                <div>
+                <>
                     <div>
-                        <h2>{data.project[0].jeux[id].name}</h2>
-                        <p>{data.project[0].jeux[id].desc}</p>
-                        <img src={"/src/images/capture" + id + ".png"} height={500} width={500} alt={data.project[0].jeux[id].name}/>
+                        { AffichageInfos(id, type) }
                         <div className={"content"}>
-                            {
-                                data.project[0].jeux[id].competences[0].langages.map((lang) => {
-                                    return (
-                                        <div className={"competences"}>
-                                            <img src={data_competences.competences[0].langages[lang].image} height={150}></img>
-                                            <p>{data_competences.competences[0].langages[lang].name}</p>
-                                        </div>
-                                    )
-                                })
-                            }
-                            {
-                                data.project[0].jeux[id].competences[0].logiciels.map((logi) => {
-                                    return (
-                                        <div className={"competences"}>
-                                            <img src={data_competences.competences[0].logiciels[logi].image} height={150}></img>
-                                            <p>{data_competences.competences[0].logiciels[logi].name}</p>
-                                        </div>
-                                    )
-                                })
-                            }
+                            { AffichageLangages(id, type) }
+                            { AffichageLogiciels(id, type) }
                         </div>
                     </div>
                     <div className={"project-nav"}>
@@ -108,8 +149,7 @@ function Projet(){
                         <Link to={"/portfolio/creations"}><button>Retour à la liste</button></Link>
                         { CheckNext(id, type) }
                     </div>
-                </div>
-            }
+                </>
             <Footer></Footer>
         </>
     )

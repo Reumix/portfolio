@@ -14,8 +14,8 @@
         },
         {
           "id": 2,
-          "name": "Javascript",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+          "name": "React JS",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
         },
         {
           "id": 3,
@@ -71,8 +71,8 @@
         },
         {
           "id": 7,
-          "name": "React",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+          "name": "Visual Studio",
+          "image": "https://logos-marques.com/wp-content/uploads/2021/03/Visual-Studio-Logo.png"
         }
       ]
     }
