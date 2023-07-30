@@ -119,15 +119,11 @@ a:link {
 }
 
 .more:hover {
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -30%) scale(1.05);
 }
 
 #experience {
 //background-color: green;
-}
-
-#projets {
-//background-color: red;
 }
 
 .competences, .professionnelle, .projets {
@@ -194,7 +190,7 @@ a:link {
     margin-right: 20px;
 }
 
-.experience-slider a{
+.experience-slider a, .projets-slider a{
     text-decoration: none;
     border-radius: 25px;
     padding: 5px 10px 5px 10px;
@@ -203,16 +199,16 @@ a:link {
     transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
-.experience-slider a:visited {
+.experience-slider a:visited, .projets-slider a:visited {
     color: var(--font-color-light);
 }
 
-.experience-slider a:hover {
+.experience-slider a:hover, .projets-slider a:hover {
     background-color: var(--transparent);
     border: 1px solid var(--transparent);
 }
 
-.slider-selector {
+.experience-slider-selector, .projets-slider-selector {
     display: flex;
     justify-content: center;
 }
