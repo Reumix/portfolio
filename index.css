@@ -111,7 +111,11 @@ li {
 }
 
 a:visited {
-    color: #c2d9ff;
+    color: var(--font-color-light);
+}
+
+a:link {
+    color: var(--font-color-light);
 }
 
 .more:hover {
