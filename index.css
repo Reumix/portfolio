@@ -6,7 +6,7 @@ html {
     --background-color: #0a1930;
     --font-color-light: #c2d9ff;
     --extra-color: #84fcff;
-    --transparent: rgba(255,255,255,0.1);
+    --transparent: rgba(255,255,255,0.05);
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--font-color-light);
@@ -23,7 +23,7 @@ html {
     right: 5px;
 }
 
-.header a {
+.header a, .xp_pro h2 {
     color: var(--font-color-light);
     text-decoration: none;
     transition: transform 0.3s ease-in-out;
@@ -34,7 +34,7 @@ html {
     transform: translateY(20px);
 }
 
-.header a::before {
+.header a::before, .xp_pro h2::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -47,7 +47,7 @@ html {
     transition: transform .3s ease-in-out;
 }
 
-.header a:hover::before {
+.header a:hover::before, .xp_pro:hover h2::before {
     transform-origin: left;
     transform: scaleX(1);
 }
@@ -169,6 +169,10 @@ a:link {
     border-radius: 9px;
     border: 1px solid var(--background-color);
     transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.xp_pro div > * {
+    width: fit-content;
 }
 
 .projet {
