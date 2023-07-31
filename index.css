@@ -7,6 +7,7 @@ html {
     --font-color-light: #c2d9ff;
     --extra-color: #84fcff;
     --transparent: rgba(255,255,255,0.05);
+    --scrollbar-width: 5px;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--font-color-light);
@@ -194,6 +195,39 @@ a:link {
     margin-right: 20px;
 }
 
+.experience-slider, .projets-slider {
+    overflow: hidden;
+}
+
+.experience-slides, .projets-slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.experience-slides > div, .projets-slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.experience-slides::-webkit-scrollbar, .projets-slides::-webkit-scrollbar {
+    width: 30px;
+    height: var(--scrollbar-width);
+}
+
+.experience-slides::-webkit-scrollbar-thumb, .projets-slides::-webkit-scrollbar-thumb {
+    background-color: var(--extra-color);
+    border-radius: 10px;
+}
+
 .experience-slider a, .projets-slider a{
     text-decoration: none;
     border-radius: 25px;
@@ -239,7 +273,15 @@ a:link {
     justify-content: left;
 }
 
+html::-webkit-scrollbar{
+    background: none;
+    width: var(--scrollbar-width);
+}
 
+html::-webkit-scrollbar-thumb {
+    background-color: var(--extra-color);
+    border-radius: 9px;
+}
 
 
 
