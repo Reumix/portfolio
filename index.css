@@ -110,16 +110,16 @@ li {
     transition: transform 0.3s ease-in-out;
 }
 
+.more:hover {
+    transform: translate(-50%, -30%) scale(1.05);
+}
+
 a:visited {
     color: var(--font-color-light);
 }
 
 a:link {
     color: var(--font-color-light);
-}
-
-.more:hover {
-    transform: translate(-50%, -30%) scale(1.05);
 }
 
 #experience {
@@ -137,12 +137,12 @@ a:link {
     justify-content: space-around;
 }
 
-.competences img, .professionnelle img, .projet img {
+.competences img, .xp_pro img, .projet img {
     height: 80px;
     transition: filter 0.3s ease-in-out;
 }
 
-.competence:hover img, .professionnelle:hover img, .projet:hover img {
+.competence:hover img, .xp_pro:hover img, .projet:hover img {
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6));
 }
 
