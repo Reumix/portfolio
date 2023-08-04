@@ -125,6 +125,10 @@ li {
     transform: translate(-50%, -30%) scale(1.05);
 }
 
+a {
+    text-decoration: none;
+}
+
 a:visited {
     color: var(--font-color-light);
 }
