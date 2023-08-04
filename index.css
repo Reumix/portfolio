@@ -1,3 +1,13 @@
+html::-webkit-scrollbar{
+    background: none;
+    width: var(--scrollbar-width);
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--extra-color);
+    border-radius: 9px;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -127,7 +137,7 @@ a:link {
 //background-color: green;
 }
 
-.competences, .professionnelle, .projets {
+.competences, .professionnelle, .projets, .contact {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -181,7 +191,7 @@ a:link {
     margin-bottom: 20px;
 }
 
-.xp_pro:hover, .projet:hover, .competence:hover {
+.xp_pro:hover, .projet:hover, .competence:hover, .contact:hover {
     background-color: var(--transparent);
     border: 1px solid var(--transparent);
 }
@@ -189,9 +199,6 @@ a:link {
 .xp_pro img, .projet img {
     border-radius: 9px;
     height: 150px;
-}
-
-.xp_pro img, .projet img {
     margin-right: 20px;
 }
 
@@ -273,18 +280,29 @@ a:link {
     justify-content: left;
 }
 
-html::-webkit-scrollbar{
-    background: none;
-    width: var(--scrollbar-width);
+.contacts {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-html::-webkit-scrollbar-thumb {
-    background-color: var(--extra-color);
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+    border: 1px solid var(--background-color);
     border-radius: 9px;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+#experience, #projets, #contacts {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 
 .footer {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
