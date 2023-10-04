@@ -34,7 +34,7 @@ html {
     right: 5px;
 }
 
-.header a, .xp_pro h2 {
+.header a, .xp_pro h2, .projet h2 {
     color: var(--font-color-light);
     text-decoration: none;
     transition: transform 0.3s ease-in-out;
@@ -45,7 +45,10 @@ html {
     transform: translateY(20px);
 }
 
-.header a::before, .xp_pro h2::before {
+.header a::before, 
+.xp_pro h2::before,
+.projet h2::before
+{
     content: '';
     position: absolute;
     width: 100%;
@@ -58,7 +61,10 @@ html {
     transition: transform .3s ease-in-out;
 }
 
-.header a:hover::before, .xp_pro:hover h2::before {
+.header a:hover::before, 
+.xp_pro:hover h2::before,
+.projet:hover h2::before
+{
     transform-origin: left;
     transform: scaleX(1);
 }
@@ -67,7 +73,6 @@ li {
     list-style: none;
 }
 
-/*Aligne les éléments du header*/
 .header ul {
     display: flex;
     align-items: center;
@@ -82,11 +87,8 @@ li {
     height: 100vh;
     display: flex;
     justify-content: center;
-}
-
-.description {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
 }
 
 .description h1 {
@@ -108,6 +110,12 @@ li {
     font-weight: lighter;
     margin-top: 10px;
     margin-bottom: 0px;
+}
+
+.description img {
+    width: 300px;
+    box-shadow: 0px 0px 40px black;
+    border-radius: 9px;
 }
 
 .more {
@@ -135,10 +143,6 @@ a:visited {
 
 a:link {
     color: var(--font-color-light);
-}
-
-#experience {
-//background-color: green;
 }
 
 .competences, .professionnelle, .projets, .contact {
@@ -186,7 +190,7 @@ a:link {
     transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
-.xp_pro div > * {
+.xp_pro div > *, .projet div > * {
     width: fit-content;
 }
 
@@ -203,7 +207,10 @@ a:link {
 .xp_pro img, .projet img {
     border-radius: 9px;
     height: 150px;
-    margin-right: 20px;
+}
+
+.projet > div {
+    margin-left: 20px;
 }
 
 .experience-slider, .projets-slider {
@@ -227,6 +234,7 @@ a:link {
     transform: scale(1);
     transition: transform 0.5s;
     position: relative;
+    overflow: hidden;
 }
 
 .experience-slides::-webkit-scrollbar, .projets-slides::-webkit-scrollbar {
@@ -304,6 +312,17 @@ a:link {
     padding-bottom: 50px;
 }
 
+.more-projet {
+    scale: 0;
+    background-color: red;
+    position: absolute;
+    transition: scale 0.3s ease-in-out;
+}
+
+.projet:hover .more-projet {
+    scale: 100;
+    position: relative;
+}
 
 .footer {
     display: flex;
