@@ -161,6 +161,10 @@ a:link {
     transition: filter 0.3s ease-in-out;
 }
 
+.xp_pro img {
+    margin-right: 20px;
+}
+
 .competence:hover img, .xp_pro:hover img, .projet:hover img {
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6));
 }
