@@ -194,8 +194,12 @@ a:link {
     transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
-.xp_pro div > *, .projet div > * {
+.projet div > * {
     width: fit-content;
+}
+
+.xp_pro {
+    width: 30vw;
 }
 
 .projet {
