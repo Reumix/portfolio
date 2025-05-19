@@ -19,46 +19,63 @@ function App() {
   const sectionContacts = useRef(null);
 
   const scrollToSection = (ref) => {
-    ref.current?.scrollIntoView({behaviour: "smooth"})
+    ref.current?.scrollIntoView({behaviour: "auto"})
   }
 
   return (
-    <div className='overflow-hidden h-screen w-full'>
-      <div className='fixed left-0 h-screen content-center text-blue-200 z-50 w-52'>
-        <button className='flex m-5 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 hover:mx-7' onClick={() => scrollToSection(sectionProfile)}>
-          <HomeIcon className="h-6 w-6 mr-3" />
-          <h1>Profile</h1>
+    <div className='lg:overflow-hidden h-screen w-full'>
+
+      {/* ---------------------------------------------------------Menu-PC--------------------------------------------------------- */}
+
+      <div className='fixed lg:left-0 lg:h-screen lg:content-center text-blue-200 z-50 lg:w-52 bottom-0 flex lg:block w-screen lg:bg-transparent bg-red-900 lg:m-10 my-10 mx-10 py-5 rounded'>
+        <button className='flex mx-5 lg:my-12 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 lg:hover:mx-7' onClick={() => scrollToSection(sectionProfile)}>
+          <HomeIcon className="h-6 w-6 lg:mr-3" />
+          <h1 className='hidden lg:block'>Profile</h1>
         </button>
-        <button className='flex m-5 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 hover:mx-7' onClick={() => scrollToSection(sectionProjets)}>
-          <WrenchScrewdriverIcon className="h-6 w-6 mr-3" />
-          <h1>Projets</h1>
+        <button className='flex mx-5 lg:my-12 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 lg:hover:mx-7' onClick={() => scrollToSection(sectionProjets)}>
+          <WrenchScrewdriverIcon className="h-6 w-6 lg:mr-3" />
+          <h1 className='hidden lg:block'>Projets</h1>
         </button>
-        <button className='flex m-5 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 hover:mx-7' onClick={() => scrollToSection(sectionCompetences)}>
-          <ChartBarIcon className="h-6 w-6 mr-3" />
-          <h1>Compétences</h1>
+        <button className='flex mx-5 lg:my-12 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 lg:hover:mx-7' onClick={() => scrollToSection(sectionCompetences)}>
+          <ChartBarIcon className="h-6 w-6 lg:mr-3" />
+          <h1 className='hidden lg:block'>Compétences</h1>
         </button>
-        <button className='flex m-5 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 hover:mx-7' onClick={() => scrollToSection(sectionParcour)}>
-          <AcademicCapIcon className="h-6 w-6 mr-3" />
-          <h1>Parcours</h1>
+        <button className='flex mx-5 lg:my-12 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 lg:hover:mx-7' onClick={() => scrollToSection(sectionParcour)}>
+          <AcademicCapIcon className="h-6 w-6 lg:mr-3" />
+          <h1 className='hidden lg:block'>Parcours</h1>
         </button>
-        <button className='flex m-5 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 hover:mx-7' onClick={() => scrollToSection(sectionContacts)}>
-          <AtSymbolIcon className="h-6 w-6 mr-3" />
-          <h1>Contacts</h1>
+        <button className='flex mx-5 lg:my-12 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 lg:hover:mx-7' onClick={() => scrollToSection(sectionContacts)}>
+          <AtSymbolIcon className="h-6 w-6 lg:mr-3" />
+          <h1 className='hidden lg:block'>Contacts</h1>
         </button>
       </div>
-      <div className='bg-gray-900 text-blue-200 w-full min-h-screen font-mono overflow-hidden'>
+
+      {/* ---------------------------------------------------------Fin-Menu-PC--------------------------------------------------------- */}
+
+      <div className='bg-gray-900 text-blue-200 w-full min-h-screen font-mono lg:overflow-hidden '>
+
+        {/* ---------------------------------------------------------Accueil--------------------------------------------------------- */}
+
         <div ref={sectionProfile} className='flex flex-col w-full h-screen py-50 justify-center'>
-          <h1 className='text-4xl font-bold lg:text-8xl text-center pb-5'>Bienvenue</h1>
+          <h1 className='text-4xl font-bold lg:text-8xl text-center pb-5'>Bienvenue,</h1>
           <p className='text-wrap mx-10 lg:text-2xl lg:mx-60'>Je suis Rémi Chabrerie, développeur de site web et créateur de jeux vidéo.</p>
           <p className='text-wrap text-justify mx-10 lg:text-2xl lg:mx-60'>Diplomé d'un BUT Informatique Graphique durant lequel j'ai pu apprendre et approfondir les bases du développement,
             j'ai poursivit des projets indépendant, répondant à des besoins ou des idées créatives personnelles.</p>
+          <div className='flex w-full h-50 justify-center items-center'>
+            <a className='hover:bg-blue-200 border border-blue-200 hover:text-white hover:scale-110 rounded h-fit p-5 m-2 duration-150' href='https://github.com/Reumix' target='_blank'>Github</a>
+          </div>
         </div>
-        <div ref={sectionProjets} className='w-full h-screen'>
+
+        {/* ---------------------------------------------------------Fin-Accueil--------------------------------------------------------- */}
+
+        {/* ---------------------------------------------------------Projets--------------------------------------------------------- */}
+
+        <div ref={sectionProjets} className='w-full lg:h-screen h-fit'>
           <h1 className='text-3xl text-blue-200 font-bold text-center py-5'>Mes projets</h1>
           <div className='flex flex-col flex-wrap lg:flex-row lg:px-50 lg:justify-center'>
             <div className=' m-2 p-2 lg:w-1/3 hover:bg-blue-200 hover:text-gray-900 rounded duration-150'>
               <img src={cold_case} className='rounded mb-2'/>
-              <h1 className='text-2xl font-bold pb-2'>Cold Case <span className='italic text-lg'> (en cours d'écriture du scénario)</span></h1>
+              <h1 className='text-2xl font-bold pb-2'>Cold Case<span className='italic text-lg'> (en cours d'écriture du scénario)</span></h1>
               <p><span class="font-semibold">Cold Case</span> est un jeu narratif d'enquête à la 3ème personne inspiré des angles de caméras des premiers Resident Evil.</p>
             </div>
             <div className=' m-2 p-2 lg:w-1/3 hover:bg-blue-200 hover:text-gray-900 rounded duration-150'>
@@ -73,7 +90,12 @@ function App() {
             </div>
           </div>
         </div>
-        <div ref={sectionCompetences} className='w-full h-screen'>
+
+        {/* ---------------------------------------------------------Fin-Projets--------------------------------------------------------- */}
+
+        {/* ---------------------------------------------------------Compétences--------------------------------------------------------- */}
+
+        <div ref={sectionCompetences} className='w-full lg:h-screen h-fit'>
           <h1 className='text-3xl text-blue-200 font-bold text-center py-5'>Mes compétences</h1>
           <div className='flex flex-col flex-wrap'>
             <h1 className='text-xl font-bold pb-2 text-center'>Développement Web</h1>
@@ -126,6 +148,9 @@ function App() {
             <h1 className='text-xl font-bold pb-2 text-center'>Création de jeux vidéo</h1>
           </div>
         </div>
+
+        {/* ---------------------------------------------------------Fin-Compétences--------------------------------------------------------- */}
+
       </div>
     </div>
   )
