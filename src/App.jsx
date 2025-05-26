@@ -27,25 +27,25 @@ function App() {
 
       {/* ---------------------------------------------------------Menu-PC--------------------------------------------------------- */}
 
-      <div className='fixed lg:left-0 lg:h-screen lg:content-center text-blue-200 z-50 lg:w-52 bottom-0 flex lg:block w-screen lg:bg-transparent bg-red-900 lg:m-10 my-10 mx-10 py-5 rounded'>
+      <div className='fixed lg:left-0 lg:h-screen lg:content-center text-blue-200 z-50 lg:w-52 bottom-0 flex justify-around lg:block w-full lg:shadow-none shadow-2xl shadow-blue-200 bg-gray-900 py-5 lg:bg-transparent lg:m-10 rounded'>
         <button className='flex mx-5 lg:my-12 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 lg:hover:mx-7' onClick={() => scrollToSection(sectionProfile)}>
-          <HomeIcon className="h-6 w-6 lg:mr-3" />
+          <HomeIcon className="h-8 w-8 lg:h-6 lg:w-6 lg:mr-3" />
           <h1 className='hidden lg:block'>Profile</h1>
         </button>
         <button className='flex mx-5 lg:my-12 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 lg:hover:mx-7' onClick={() => scrollToSection(sectionProjets)}>
-          <WrenchScrewdriverIcon className="h-6 w-6 lg:mr-3" />
+          <WrenchScrewdriverIcon className="h-8 w-8 lg:h-6 lg:w-6 lg:mr-3" />
           <h1 className='hidden lg:block'>Projets</h1>
         </button>
         <button className='flex mx-5 lg:my-12 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 lg:hover:mx-7' onClick={() => scrollToSection(sectionCompetences)}>
-          <ChartBarIcon className="h-6 w-6 lg:mr-3" />
+          <ChartBarIcon className="h-8 w-8 lg:h-6 lg:w-6 lg:mr-3" />
           <h1 className='hidden lg:block'>Compétences</h1>
         </button>
         <button className='flex mx-5 lg:my-12 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 lg:hover:mx-7' onClick={() => scrollToSection(sectionParcour)}>
-          <AcademicCapIcon className="h-6 w-6 lg:mr-3" />
+          <AcademicCapIcon className="h-8 w-8 lg:h-6 lg:w-6 lg:mr-3" />
           <h1 className='hidden lg:block'>Parcours</h1>
         </button>
         <button className='flex mx-5 lg:my-12 w-fit h-fit hover:bg-blue-200 hover:text-gray-900 p-1 rounded duration-150 lg:hover:mx-7' onClick={() => scrollToSection(sectionContacts)}>
-          <AtSymbolIcon className="h-6 w-6 lg:mr-3" />
+          <AtSymbolIcon className="h-8 w-8 lg:h-6 lg:w-6 lg:mr-3" />
           <h1 className='hidden lg:block'>Contacts</h1>
         </button>
       </div>
@@ -100,7 +100,9 @@ function App() {
           <div className='flex flex-col flex-wrap'>
             <h1 className='text-xl font-bold pb-2 text-center'>Développement Web</h1>
             <div className='flex flex-wrap w-full justify-center'>
-              <div className='flex flex-row h-fit bg-gray-700 p-2 m-2 rounded text-center hover:bg-blue-200 hover:text-gray-900 duration-150'>
+              <div className='flex flex-col h-fit bg-gray-700 p-2 m-2 rounded text-center hover:bg-blue-200 hover:text-gray-900 duration-150'>
+                <h1 className='text-xl pb-3'>Langages de programmations</h1>
+                <div className='flex flex-row'>
                   <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png' 
                   alt='HTML' 
                   className='rounded h-30'/>
@@ -113,8 +115,11 @@ function App() {
                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png" 
                   alt="Typescript" 
                   className='rounded h-30 p-2'/>
+                </div>
               </div>
-              <div className='flex flex-row h-fit bg-gray-700 p-2 m-2 rounded text-center hover:bg-blue-200 hover:text-gray-900 duration-150'>
+              <div className='flex flex-col h-fit bg-gray-700 p-2 m-2 rounded text-center hover:bg-blue-200 hover:text-gray-900 duration-150'>
+                <h1 className='text-xl pb-3'>Frameworks</h1>
+                <div className='flex flex-row'>
                   <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1200px-Tailwind_CSS_Logo.svg.png' 
                   alt='TailWind CSS' 
                   className='rounded h-30 p-2'/>
@@ -127,8 +132,11 @@ function App() {
                   <img src="https://avatars.githubusercontent.com/u/108266839?v=4" 
                   alt="T3 App" 
                   className='rounded h-30 p-2' />
+                </div>
               </div>
-              <div className='flex flex-row h-fit bg-gray-700 p-2 m-2 rounded text-center hover:bg-blue-200 hover:text-gray-900 duration-150'>
+              <div className='flex flex-col h-fit bg-gray-700 p-2 m-2 rounded text-center hover:bg-blue-200 hover:text-gray-900 duration-150'>
+                <h1 className='text-xl pb-3'>Bases de données</h1>
+                <div className='flex flex-row'>
                   <img src="https://cdn.iconscout.com/icon/free/png-256/free-mysql-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-3030165.png" 
                   alt="MySQL" 
                   className='rounded h-30 p-2' />
@@ -139,8 +147,9 @@ function App() {
                   alt="Redis" 
                   className='rounded h-30 p-2' />
                   <img src="https://images.icon-icons.com/2415/PNG/512/mongodb_original_wordmark_logo_icon_146425.png" 
-                  alt="Redis" 
+                  alt="MongoDB" 
                   className='rounded h-30 p-2' />
+                </div>
               </div>
             </div>
           </div>
